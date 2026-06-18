@@ -1,0 +1,19 @@
+<!-- TODO: Replace with a real 1200x630 PNG/JPG OG image before launch. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06223D"/>
+      <stop offset="0.6" stop-color="#0B4F8A"/>
+      <stop offset="1" stop-color="#0E8FBA"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="120" r="220" fill="#19B6E8" opacity="0.18"/>
+  <g fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif">
+    <text x="80" y="270" font-size="40" fill="#5FD0F2" font-weight="700" letter-spacing="3">DALLAS–FORT WORTH</text>
+    <text x="80" y="360" font-size="78" font-weight="800">Dallas Best Pressure Washing</text>
+    <text x="80" y="430" font-size="40" fill="#E8EEF3">DFW's Cleanest Surfaces. Guaranteed.</text>
+    <rect x="80" y="480" width="320" height="70" rx="12" fill="#FF6A2C"/>
+    <text x="240" y="525" font-size="30" font-weight="700" text-anchor="middle">Get a Free Quote</text>
+  </g>
+</svg>

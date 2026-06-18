@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface text-text antialiased;
+}
+
+/* Focus ring for accessible keyboard navigation */
+:where(a, button, input, select, textarea):focus-visible {
+  @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-surface;
+}
+
+/* Reusable button + container utilities */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-semibold transition-colors duration-150 min-h-[48px];
+  }
+
+  .btn-primary {
+    @apply btn bg-highlight text-white hover:bg-highlight-dark;
+  }
+
+  .btn-secondary {
+    @apply btn bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  .heading {
+    @apply font-heading font-extrabold tracking-tight;
+  }
+}

@@ -1,0 +1,6 @@
+<!-- App favicon (Next.js app/icon convention). TODO: replace with brand mark. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0B4F8A"/>
+  <path d="M32 12 L46 30 a18 18 0 1 1 -28 0 Z" fill="#19B6E8"/>
+  <path d="M32 20 L40 31 a10 10 0 1 1 -16 0 Z" fill="#5FD0F2"/>
+</svg>
