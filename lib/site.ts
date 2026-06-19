@@ -11,9 +11,9 @@ export const SITE_URL = (
 export const BUSINESS_NAME =
   process.env.NEXT_PUBLIC_BUSINESS_NAME ?? "Dallas Best Pressure Washing";
 
-// TODO: replace with the real Google Voice number once it exists.
+// Temporary number — swap to the new Google Voice line when it exists.
 export const BUSINESS_PHONE =
-  process.env.NEXT_PUBLIC_BUSINESS_PHONE ?? "REPLACE_WITH_GOOGLE_VOICE_NUMBER";
+  process.env.NEXT_PUBLIC_BUSINESS_PHONE ?? "682-390-5608";
 
 export const BUSINESS_EMAIL =
   process.env.NEXT_PUBLIC_BUSINESS_EMAIL ?? "hello@dbpowerwash.com";
