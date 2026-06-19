@@ -8,7 +8,8 @@ import {
   telHref,
 } from "@/lib/site";
 import { CITIES, cityRouteSlug } from "@/lib/cities";
-import { PhoneIcon, DropletIcon } from "./Icons";
+import { PhoneIcon } from "./Icons";
+import Logo from "./Logo";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -17,10 +18,7 @@ export default function Footer() {
     <footer className="mt-20 bg-primary-dark text-text-light">
       <div className="container-page grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-1">
-          <div className="flex items-center gap-2 font-heading text-lg font-extrabold text-white">
-            <DropletIcon className="h-6 w-6 text-accent" />
-            {BUSINESS_NAME}
-          </div>
+          <Logo className="h-9 w-auto text-white" />
           <p className="mt-3 text-sm text-text-light/70">
             Professional residential & commercial pressure washing serving {SERVICE_AREA}.
           </p>

@@ -4,7 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { BUSINESS_NAME, BUSINESS_PHONE, telHref } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import { PhoneIcon, MenuIcon, CloseIcon, DropletIcon } from "./Icons";
+import { PhoneIcon, MenuIcon, CloseIcon } from "./Icons";
+import Logo from "./Logo";
 
 const NAV = [
   { href: "/services", label: "Services" },
@@ -22,9 +23,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-primary/10 bg-white/95 backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2 font-heading text-lg font-extrabold text-primary">
-          <DropletIcon className="h-7 w-7 text-accent" />
-          <span className="leading-tight">{BUSINESS_NAME}</span>
+        <Link href="/" aria-label={`${BUSINESS_NAME} — home`} className="flex items-center">
+          <Logo className="h-8 w-auto text-[#0B2A4A]" />
         </Link>
 
         <nav className="hidden items-center gap-5 lg:flex" aria-label="Primary">
