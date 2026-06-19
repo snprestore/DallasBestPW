@@ -21,7 +21,7 @@ export function localBusinessSchema(extra?: { areaServed?: string }) {
     url: SITE_URL,
     telephone: BUSINESS_PHONE,
     email: BUSINESS_EMAIL,
-    image: absoluteUrl("/og-image.svg"),
+    image: absoluteUrl("/og-image.png"),
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
@@ -60,7 +60,7 @@ export function cityLocalBusinessSchema(city: City, url: string) {
     url,
     telephone: BUSINESS_PHONE,
     email: BUSINESS_EMAIL,
-    image: absoluteUrl("/og-image.svg"),
+    image: absoluteUrl("/og-image.png"),
     priceRange: "$$",
     parentOrganization: { "@id": BUSINESS_ID },
     address: {

@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     title: `${BUSINESS_NAME} | Professional Pressure Washing in DFW`,
     description:
       "Powerful, surface-safe pressure washing for DFW homes and businesses. Free quotes, licensed & insured.",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: BUSINESS_NAME }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, type: "image/png", alt: BUSINESS_NAME }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${BUSINESS_NAME} | Pressure Washing in DFW`,
     description: "Powerful, surface-safe pressure washing for DFW homes and businesses.",
-    images: ["/og-image.svg"],
+    images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
 };
