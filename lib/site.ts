@@ -5,17 +5,18 @@
  */
 
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://REPLACE-WITH-DOMAIN.com"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://dbpowerwash.com"
 ).replace(/\/$/, "");
 
 export const BUSINESS_NAME =
   process.env.NEXT_PUBLIC_BUSINESS_NAME ?? "Dallas Best Pressure Washing";
 
+// TODO: replace with the real Google Voice number once it exists.
 export const BUSINESS_PHONE =
   process.env.NEXT_PUBLIC_BUSINESS_PHONE ?? "REPLACE_WITH_GOOGLE_VOICE_NUMBER";
 
 export const BUSINESS_EMAIL =
-  process.env.NEXT_PUBLIC_BUSINESS_EMAIL ?? "REPLACE_WITH_LEAD_EMAIL";
+  process.env.NEXT_PUBLIC_BUSINESS_EMAIL ?? "hello@dbpowerwash.com";
 
 export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "";
 export const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID ?? "";

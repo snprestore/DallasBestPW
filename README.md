@@ -65,9 +65,11 @@ public/       placeholder logo / OG image (replace before launch)
 
 Replace these before going live:
 
-1. **Domain** → `NEXT_PUBLIC_SITE_URL` (+ add the domain in Vercel project settings).
-2. **Lead email** → `NEXT_PUBLIC_BUSINESS_EMAIL`, `LEAD_NOTIFICATION_EMAIL`
-   (temporarily the existing Dallas Best scheduling email).
+1. **Domain** → set to `https://dbpowerwash.com` (code default). Still attach the
+   domain in **Vercel → Settings → Domains** and point DNS so it serves the site.
+2. **Lead email** → set to `hello@dbpowerwash.com` (code default for
+   `NEXT_PUBLIC_BUSINESS_EMAIL`; set `LEAD_NOTIFICATION_EMAIL=hello@dbpowerwash.com`
+   in Vercel for the notification recipient).
 3. **Phone** → `NEXT_PUBLIC_BUSINESS_PHONE` (temporarily the existing Dallas Best
    number; swap to the new Google Voice line when it exists).
 4. **Supabase** → new project URL + `NEXT_PUBLIC_SUPABASE_ANON_KEY` +
