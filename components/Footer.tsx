@@ -61,6 +61,7 @@ export default function Footer() {
               <a href={telHref()} className="flex items-center gap-2 hover:text-white">
                 <PhoneIcon className="h-4 w-4" /> {BUSINESS_PHONE}
               </a>
+              <p className="mt-1 text-xs text-text-light/60">Available 7 days a week, 8AM – 5PM</p>
             </li>
             <li>
               <a href={`mailto:${BUSINESS_EMAIL}`} className="hover:text-white">

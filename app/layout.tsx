@@ -3,6 +3,7 @@ import { Inter, Barlow } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingCallButton from "@/components/FloatingCallButton";
 import ConsentManager from "@/components/ConsentManager";
 import { BUSINESS_NAME, GTM_ID, META_PIXEL_ID, SITE_URL } from "@/lib/site";
 import { jsonLd, localBusinessSchema } from "@/lib/schema";
@@ -147,6 +148,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <FloatingCallButton />
         <ConsentManager />
       </body>
     </html>

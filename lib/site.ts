@@ -11,9 +11,9 @@ export const SITE_URL = (
 export const BUSINESS_NAME =
   process.env.NEXT_PUBLIC_BUSINESS_NAME ?? "Dallas Best Pressure Washing";
 
-// Temporary number — swap to the new Google Voice line when it exists.
+// Routes to our AI receptionist (Kate) — handles all inbound calls automatically.
 export const BUSINESS_PHONE =
-  process.env.NEXT_PUBLIC_BUSINESS_PHONE ?? "682-390-5608";
+  process.env.NEXT_PUBLIC_BUSINESS_PHONE ?? "(945) 219-5775";
 
 export const BUSINESS_EMAIL =
   process.env.NEXT_PUBLIC_BUSINESS_EMAIL ?? "hello@dbpowerwash.com";
@@ -22,10 +22,20 @@ export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "";
 export const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID ?? "";
 export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "";
 
-/** Strip everything but digits and a leading + for use in tel: links. */
+/**
+ * Build a tel: link. Strips formatting and normalizes 10-digit US numbers to
+ * E.164 (+1XXXXXXXXXX) so dialing is reliable across devices.
+ */
 export function telHref(phone: string = BUSINESS_PHONE): string {
   const cleaned = phone.replace(/[^\d+]/g, "");
-  return `tel:${cleaned}`;
+  const normalized = cleaned.startsWith("+")
+    ? cleaned
+    : cleaned.length === 10
+      ? `+1${cleaned}`
+      : cleaned.length === 11 && cleaned.startsWith("1")
+        ? `+${cleaned}`
+        : cleaned;
+  return `tel:${normalized}`;
 }
 
 /** Service-area summary used across the site. */

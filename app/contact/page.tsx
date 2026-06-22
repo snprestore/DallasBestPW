@@ -47,11 +47,17 @@ export default function ContactPage() {
             <div className="rounded-2xl border border-primary/10 bg-white p-6 shadow-sm">
               <h2 className="font-heading text-xl font-bold text-primary">Get in touch</h2>
               <ul className="mt-4 space-y-4">
-                <li className="flex items-center gap-3">
-                  <PhoneIcon className="h-5 w-5 text-accent" />
-                  <a href={telHref()} className="font-semibold text-text hover:text-primary">
-                    {BUSINESS_PHONE}
-                  </a>
+                <li className="flex items-start gap-3">
+                  <PhoneIcon className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wide text-text-muted">Call or Text</p>
+                    <a href={telHref()} className="font-semibold text-text hover:text-primary">
+                      {BUSINESS_PHONE}
+                    </a>
+                    <p className="mt-1 text-sm text-text-muted">
+                      Our AI receptionist Kate is available 7 days a week
+                    </p>
+                  </div>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="inline-flex h-5 w-5 items-center justify-center text-accent">@</span>

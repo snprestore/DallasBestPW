@@ -53,14 +53,24 @@ export default function Header() {
           </Link>
         </div>
 
-        <button
-          className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-primary lg:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-label={open ? "Close menu" : "Open menu"}
-        >
-          {open ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center gap-1 lg:hidden">
+          <a
+            href={telHref()}
+            aria-label={`Call ${BUSINESS_PHONE}`}
+            data-tracking="header-call-mobile"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-primary"
+          >
+            <PhoneIcon className="h-6 w-6" />
+          </a>
+          <button
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-primary"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
+            {open ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
