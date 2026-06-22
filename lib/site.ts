@@ -41,8 +41,8 @@ export function telHref(phone: string = BUSINESS_PHONE): string {
 /** Service-area summary used across the site. */
 export const SERVICE_AREA = "the Dallas–Fort Worth metroplex";
 
-/** Business hours, surfaced on Contact + schema. TODO: confirm real hours. */
-export const BUSINESS_HOURS = "Mon–Sat, 7:00 AM – 7:00 PM";
+/** Business hours, surfaced on Contact + Footer. */
+export const BUSINESS_HOURS = "7 days a week, 8:00 AM – 5:00 PM";
 
 /** Absolute URL helper for canonicals, OG, sitemap. */
 export function absoluteUrl(path: string = "/"): string {
