@@ -10,7 +10,7 @@ import { absoluteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Residential Pressure Washing in DFW — Driveways, Houses & More",
   description:
-    "Residential pressure washing and soft washing in Dallas–Fort Worth: driveways, house soft wash, roofs, decks, patios, fences, gutters, and walkways. Clear starting prices.",
+    "Residential pressure washing and soft washing in Dallas–Fort Worth: driveways, house soft wash, roofs, decks, patios, fences, gutters, and walkways. Free, no-obligation quotes.",
   alternates: { canonical: "/services/residential" },
 };
 
@@ -70,7 +70,7 @@ export default function ResidentialPage() {
           <h1 className="heading text-4xl md:text-5xl">Residential Pressure Washing</h1>
           <p className="mt-4 text-lg text-text-light/90">
             From a quick driveway refresh to a full-home soft wash, we restore your home's curb
-            appeal with surface-safe methods and clear, upfront pricing.
+            appeal with surface-safe methods and a fast, free custom quote.
           </p>
         </div>
       </section>

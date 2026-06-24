@@ -5,7 +5,7 @@ import Cta from "@/components/Cta";
 import ServiceCard from "@/components/ServiceCard";
 import FaqAccordion, { type Faq } from "@/components/FaqAccordion";
 import { CITIES, cityRouteSlug, getCityByParam, type City } from "@/lib/cities";
-import { RESIDENTIAL_SERVICES, MARKET_ANCHORS } from "@/lib/pricing";
+import { RESIDENTIAL_SERVICES } from "@/lib/pricing";
 import {
   breadcrumbSchema,
   cityLocalBusinessSchema,
@@ -14,7 +14,6 @@ import {
   serviceSchema,
 } from "@/lib/schema";
 import { absoluteUrl } from "@/lib/site";
-import { formatUsd } from "@/lib/utils";
 import { ArrowRightIcon, CheckIcon } from "@/components/Icons";
 
 type Params = { city: string };
@@ -52,7 +51,7 @@ function cityFaqs(city: City): Faq[] {
     },
     {
       question: `How much does pressure washing cost in ${city.name}?`,
-      answer: `Residential services in ${city.name} start in our standard DFW ranges — a typical house wash runs about ${formatUsd(MARKET_ANCHORS.houseWashLow)}–${formatUsd(MARKET_ANCHORS.houseWashHigh)}. Commercial work is priced per square foot. Request a free quote for an exact price.`,
+      answer: `Pricing depends on the size of the area and the scope of work — every job is custom-quoted. Residential jobs are quoted per property and commercial work is priced per square foot. Contact us for a free quote and we'll give you an exact number for your ${city.name} property.`,
     },
     {
       question: `What surfaces do you clean in ${city.name}?`,
@@ -132,8 +131,8 @@ export default async function CityPage({ params }: { params: Promise<Params> }) 
             <p className="mt-4 text-text-muted">{city.localNote}</p>
             <p className="mt-4 text-text-muted">
               We serve {city.name} neighborhoods including{" "}
-              {city.neighborhoods.join(", ")} — bringing the same surface-safe methods and clear
-              pricing to every job, residential or commercial.
+              {city.neighborhoods.join(", ")} — bringing the same surface-safe methods and honest,
+              custom quotes to every job, residential or commercial.
             </p>
             <ul className="mt-6 grid gap-2 sm:grid-cols-2">
               {[
@@ -155,7 +154,7 @@ export default async function CityPage({ params }: { params: Promise<Params> }) 
             <ul className="mt-3 space-y-2 text-sm text-text-muted">
               <li>• Licensed & insured, locally operated</li>
               <li>• Surface-safe soft washing</li>
-              <li>• Transparent, upfront pricing</li>
+              <li>• Free, no-obligation quotes</li>
               <li>• Satisfaction guarantee</li>
             </ul>
             <Link href="/booking" className="btn-primary mt-5 w-full text-sm">

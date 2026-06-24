@@ -9,13 +9,13 @@ import { RESIDENTIAL_SERVICES, MARKET_ANCHORS } from "@/lib/pricing";
 import { CITIES, cityRouteSlug } from "@/lib/cities";
 import { SERVICE_AREA } from "@/lib/site";
 import { faqPageSchema, jsonLd } from "@/lib/schema";
-import { formatUsd } from "@/lib/utils";
 import { CheckIcon, DropletIcon, ShieldIcon, MapPinIcon, ArrowRightIcon } from "@/components/Icons";
 
 const HOME_FAQS: Faq[] = [
   {
     question: "How much does pressure washing cost in Dallas?",
-    answer: `It depends on the surface and size. Residential services start in the ranges shown on our pricing — a typical DFW house wash runs about ${formatUsd(MARKET_ANCHORS.houseWashLow)}–${formatUsd(MARKET_ANCHORS.houseWashHigh)}. Commercial work is priced per square foot (roughly $0.40–$0.50/sq ft for standard jobs). Get a free quote for an exact price.`,
+    answer:
+      "Pricing depends on the size of the area and the scope of work. Residential jobs are custom-quoted per property, and commercial work is priced per square foot. Contact us for a free quote — we'll assess your property and give you an exact number.",
   },
   {
     question: "Do you use pressure washing or soft washing?",
@@ -81,8 +81,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="heading text-3xl text-text md:text-4xl">Residential Pressure Washing</h2>
           <p className="mt-3 text-text-muted">
-            Clear pricing, no surprises. Simple starting ranges — final price confirmed with a quick
-            free quote.
+            Surface-safe cleaning for every part of your property. Every job is custom-quoted — get a
+            fast, free quote.
           </p>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

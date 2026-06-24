@@ -60,7 +60,7 @@ export default function ServicesPage() {
           <h2 className="mt-4 font-heading text-2xl font-bold text-primary">Residential</h2>
           <p className="mt-2 text-text-muted">
             Driveways, house soft washing, roofs, decks, patios, fences, gutters, and walkways —
-            with clear, fixed starting ranges.
+            custom-quoted for your property with a fast, free estimate.
           </p>
           <span className="mt-4 inline-flex items-center font-semibold text-highlight">
             View residential services
