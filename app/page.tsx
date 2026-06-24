@@ -2,41 +2,17 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import ServiceCard from "@/components/ServiceCard";
+import WhatWeRemove from "@/components/WhatWeRemove";
+import HowItWorks from "@/components/HowItWorks";
+import ServiceSelector from "@/components/ServiceSelector";
+import Faq, { FAQ_ITEMS } from "@/components/Faq";
 import Cta from "@/components/Cta";
 import Testimonials from "@/components/Testimonials";
-import FaqAccordion, { type Faq } from "@/components/FaqAccordion";
 import { RESIDENTIAL_SERVICES, MARKET_ANCHORS } from "@/lib/pricing";
 import { CITIES, cityRouteSlug } from "@/lib/cities";
 import { SERVICE_AREA } from "@/lib/site";
 import { faqPageSchema, jsonLd } from "@/lib/schema";
 import { CheckIcon, DropletIcon, ShieldIcon, MapPinIcon, ArrowRightIcon } from "@/components/Icons";
-
-const HOME_FAQS: Faq[] = [
-  {
-    question: "How much does pressure washing cost in Dallas?",
-    answer:
-      "Pricing depends on the size of the area and the scope of work. Residential jobs are custom-quoted per property, and commercial work is priced per square foot. Contact us for a free quote — we'll assess your property and give you an exact number.",
-  },
-  {
-    question: "Do you use pressure washing or soft washing?",
-    answer:
-      "Both — we match the method to the surface. Durable concrete gets surface cleaning at higher pressure, while siding, roofs, brick, and stucco get a low-pressure soft wash with cleaning solutions so we never cause damage.",
-  },
-  {
-    question: "Are you licensed and insured?",
-    answer:
-      "Yes. Dallas Best Pressure Washing is a licensed and insured local company serving the Dallas–Fort Worth metroplex. (TODO: add license/insurance specifics before launch.)",
-  },
-  {
-    question: "How long does a job take?",
-    answer:
-      "Most residential jobs are completed in a few hours. Larger homes and commercial flatwork may take longer; we'll give you a clear time estimate with your quote.",
-  },
-  {
-    question: "What areas do you serve?",
-    answer: `We serve ${SERVICE_AREA}, including Dallas, Plano, Frisco, McKinney, Irving, and many more. See our service-area pages for your city.`,
-  },
-];
 
 const WHY_US = [
   {
@@ -66,7 +42,11 @@ export default function HomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: jsonLd(faqPageSchema(HOME_FAQS)) }}
+        dangerouslySetInnerHTML={{
+          __html: jsonLd(
+            faqPageSchema(FAQ_ITEMS.map((f) => ({ question: f.q, answer: f.a })))
+          ),
+        }}
       />
 
       <Hero
@@ -75,6 +55,12 @@ export default function HomePage() {
       />
 
       <TrustBar />
+
+      <WhatWeRemove />
+
+      <HowItWorks />
+
+      <ServiceSelector />
 
       {/* Residential services */}
       <section className="container-page py-16">
@@ -174,12 +160,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="container-page pb-16">
-        <h2 className="heading mb-8 text-center text-3xl text-text md:text-4xl">
-          Frequently Asked Questions
-        </h2>
-        <FaqAccordion faqs={HOME_FAQS} />
-      </section>
+      <Faq />
 
       <Cta />
     </>

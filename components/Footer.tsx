@@ -9,6 +9,7 @@ import {
 } from "@/lib/site";
 import { CITIES, cityRouteSlug } from "@/lib/cities";
 import { PhoneIcon } from "./Icons";
+import ResponseBadge from "./ResponseBadge";
 import Logo from "./Logo";
 
 export default function Footer() {
@@ -71,6 +72,18 @@ export default function Footer() {
             <li><Link href="/contact" className="hover:text-white">Contact page</Link></li>
             <li><Link href="/about" className="hover:text-white">About us</Link></li>
           </ul>
+          <div className="mt-5 flex flex-col gap-2">
+            <a href={telHref()} className="btn-primary w-full text-sm" data-tracking="footer-call">
+              <PhoneIcon className="mr-2 h-4 w-4" /> Call {BUSINESS_PHONE}
+            </a>
+            <Link
+              href="/booking"
+              className="btn w-full border-2 border-white/40 text-sm text-white hover:bg-white/10"
+            >
+              Get a Free Quote
+            </Link>
+            <ResponseBadge tone="light" className="mt-1 self-start" />
+          </div>
         </div>
       </div>
 

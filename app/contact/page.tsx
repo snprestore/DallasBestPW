@@ -10,6 +10,7 @@ import {
 } from "@/lib/site";
 import { breadcrumbSchema, jsonLd } from "@/lib/schema";
 import { PhoneIcon, MapPinIcon, CheckIcon } from "@/components/Icons";
+import ResponseBadge from "@/components/ResponseBadge";
 
 export const metadata: Metadata = {
   title: "Contact Us — DFW Pressure Washing",
@@ -57,6 +58,7 @@ export default function ContactPage() {
                     <p className="mt-1 text-sm text-text-muted">
                       Our AI receptionist Kate is available 7 days a week
                     </p>
+                    <ResponseBadge className="mt-3" />
                   </div>
                 </li>
                 <li className="flex items-center gap-3">
@@ -86,6 +88,7 @@ export default function ContactPage() {
             <Link href="/booking" className="btn-primary mt-6">
               Get a Free Quote
             </Link>
+            <ResponseBadge tone="light" className="mt-4" />
           </div>
         </div>
       </section>

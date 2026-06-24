@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { telHref, BUSINESS_PHONE } from "@/lib/site";
 import { PhoneIcon, ArrowRightIcon } from "./Icons";
+import ResponseBadge from "./ResponseBadge";
 
 type HeroProps = {
   eyebrow?: string;
@@ -58,6 +59,7 @@ export default function Hero({
               </a>
             )}
           </div>
+          <ResponseBadge tone="light" className="mt-4" />
         </div>
       </div>
     </section>
